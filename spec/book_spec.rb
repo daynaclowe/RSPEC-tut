@@ -10,5 +10,8 @@ describe Book do
 		it "returns a new book object" do
 			@book.should be_an_instance_of Book
 		end
+		it "takes three parameters and returns a book object" do
+			lambda { Book.new "Title", "Author"}.should raise_exception ArgumentError
+		end
 	end
 end
