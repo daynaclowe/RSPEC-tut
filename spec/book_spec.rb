@@ -27,6 +27,9 @@ describe Book do
 		it "returns the correct category" do
 			@book.category.should eql "Category"
 		end		
+	end
 
+	it "returns all the books in a given category" do
+		@lib.get_books_in_category(:development).length.should == 2
 	end
 end
